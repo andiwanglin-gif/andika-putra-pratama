@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #050816;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+/* Wrapper */
+.page-wrapper {
+  width: 100%;
+  max-width: 780px;
+}
+
+.profile-card {
+  position: relative;
+  background: #080d24;
+
+  border: 2px solid transparent;
+  border-radius: 18px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 0 10px #ff1744,
+    0 0 25px rgba(255, 23, 68, 0.5),
+    0 0 45px rgba(0, 110, 255, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  transition: 0.3s;
+
+  /* Border neon */
+  background-image:
+    linear-gradient(#080d24, #080d24),
+    linear-gradient(
+      90deg,
+      #ff003c,
+      #ff00cc,
+      #0066ff,
+      #00d9ff,
+      #ff003c
+    );
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+
+.btn-tema {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  background: #080d24;
+  border: 2px solid #ff00cc;
+  color: #ffffff;
+
+  padding: 7px 12px;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  z-index: 10;
+
+  box-shadow:
+    0 0 8px #ff00cc,
+    0 0 18px rgba(255, 0, 204, 0.6);
+
+  transition: 0.3s;
+}
+
+.btn-tema:hover {
+  background: #ff00cc;
+  color: white;
+
+  box-shadow:
+    0 0 10px #ff00cc,
+    0 0 30px #ff00cc,
+    0 0 50px #ff1744;
+
+  transform: scale(1.05);
+}
+
+
+.card-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #ff1744;
+
+  box-shadow: 0 1px 0 rgba(255, 0, 100, 0.3);
+}
+
+.avatar-box {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  border: 3px solid #ff00cc;
+
+  overflow: hidden;
+
+  margin-bottom: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #050816;
+
+  box-shadow:
+    0 0 8px #ff1744,
+    0 0 18px #ff00cc,
+    0 0 30px #0066ff;
+
+  transition: 0.3s;
+}
+
+.avatar-box:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 10px #ff1744,
+    0 0 25px #ff00cc,
+    0 0 45px #0066ff;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.student-name {
+  font-size: 21px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 5px #ff1744,
+    0 0 12px #ff00cc;
+}
+
+.student-role {
+  color: #00c8ff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-top: 5px;
+
+  text-shadow:
+    0 0 8px #00c8ff;
+}
+
+.student-school {
+  color: #d8d8ff;
+
+  font-size: 12px;
+
+  margin-top: 3px;
+}
+
+
+.btn-contact {
+  margin-top: 16px;
+
+  display: inline-block;
+
+  width: 100%;
+
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    #ff003c,
+    #ff00cc,
+    #0066ff
+  );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  padding: 11px 16px;
+
+  border-radius: 9px;
+
+  font-weight: 700;
+  font-size: 13px;
+
+  box-shadow:
+    0 0 8px #ff1744,
+    0 0 20px rgba(255, 0, 204, 0.6);
+
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 10px #ff003c,
+    0 0 25px #ff00cc,
+    0 0 40px #0066ff;
+}
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-heading {
+  font-size: 13px;
+
+  color: #00c8ff;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+
+  font-weight: 700;
+
+  text-shadow:
+    0 0 5px #00c8ff,
+    0 0 12px #0066ff;
+}
+
+
+.bio-text {
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #dbeafe;
+}
+
+
+.skill-matrix {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.skill-badge {
+  background: #070d22;
+
+  border: 1px solid #ff00cc;
+
+  color: #ffffff;
+
+  padding: 6px 13px;
+
+  border-radius: 18px;
+
+  font-size: 11.5px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 0 6px #ff00cc,
+    0 0 12px rgba(255, 0, 204, 0.4);
+
+  transition: 0.3s;
+}
+
+.skill-badge:hover {
+  border-color: #00c8ff;
+
+  color: #00c8ff;
+
+  box-shadow:
+    0 0 8px #00c8ff,
+    0 0 18px #0066ff;
+
+  transform: translateY(-2px);
+}
+
+
+body.light-mode {
+  background: #eef2ff;
+  color: #111827;
+}
+
+body.light-mode .profile-card {
+  background: #ffffff;
+
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(
+      90deg,
+      #ff1744,
+      #ff00cc,
+      #0066ff
+    );
+
+  box-shadow:
+    0 0 10px rgba(255, 0, 100, 0.4),
+    0 0 25px rgba(0, 100, 255, 0.25);
+}
+
+body.light-mode .btn-tema {
+  background: #ffffff;
+  color: #111827;
+}
+
+body.light-mode .student-name {
+  color: #111827;
+}
+
+body.light-mode .bio-text {
+  color: #334155;
+}
+
+body.light-mode .student-school {
+  color: #475569;
+}
+
+body.light-mode .skill-badge {
+  background: #f8fafc;
+  color: #111827;
+}
+
+.modal-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-box {
+  background: #080d24;
+
+  color: #ffffff;
+
+  padding: 24px;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  width: 90%;
+  max-width: 360px;
+
+  border: 2px solid #ff00cc;
+
+  box-shadow:
+    0 0 10px #ff1744,
+    0 0 25px #ff00cc,
+    0 0 40px #0066ff;
+}
+
+
+.btn-tutup {
+  margin-top: 16px;
+
+  background: #ff1744;
+
+  color: white;
+
+  border: none;
+
+  padding: 8px 16px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 8px #ff1744;
+
+  transition: 0.3s;
+}
+
+.btn-tutup:hover {
+  background: #ff003c;
+
+  box-shadow:
+    0 0 15px #ff1744,
+    0 0 25px #ff1744;
+}
+
+
+@media screen and (min-width: 680px) {
+
+  .profile-card {
+    flex-direction: row;
+
+    align-items: center;
+
+    padding: 36px;
+
+    gap: 36px;
+  }
+
+  .card-aside {
+    width: 200px;
+
+    flex-shrink: 0;
+
+    padding-bottom: 0;
+
+    padding-right: 28px;
+
+    border-bottom: none;
+
+    border-right: 1px solid #ff1744;
+
+    justify-content: center;
+  }
+
+  .card-content {
+    flex: 1;
+
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 679px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .profile-card {
+    padding: 25px 18px;
+    padding-top: 65px;
+  }
+
+  .btn-tema {
+    top: 12px;
+    right: 12px;
+  }
+
+  .student-name {
+    font-size: 19px;
+  }
+
+  .bio-text {
+    font-size: 12.5px;
+  }
+}
